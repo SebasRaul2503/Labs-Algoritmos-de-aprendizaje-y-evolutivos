@@ -1,0 +1,33 @@
+<footer class="footer">
+  <div class="footer-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#3a7bd5" fill-opacity="0.5" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+  
+  <div class="footer-content">
+    <div class="footer-container">
+      <div class="footer-author">
+        <div class="author-info">
+          <h3>Creado por</h3>
+          <h2 class="author-name">{{ authorName }}</h2>
+        </div>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Contacto</h3>
+        <div class="social-icons">
+          <a *ngFor="let link of socialLinks" [href]="link.url" class="social-icon" [attr.aria-label]="link.name" target="_blank" rel="noopener noreferrer">
+            <i class="icon-{{link.icon}}"></i>
+            <span>{{link.name}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">&copy; {{ currentYear }} {{ authorName }}. Todos los derechos reservados.</p>
+      <p class="made-with">Hecho con <span class="heart">❤</span> usando Angular 17</p>
+    </div>
+  </div>
+</footer>
