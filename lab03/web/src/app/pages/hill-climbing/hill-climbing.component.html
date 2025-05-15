@@ -1,0 +1,182 @@
+<div class="hill-climbing-container">
+  <section class="intro-section">
+    <h1>Hill Climbing</h1>
+    <p>
+      El Hill Climbing es una técnica de optimización matemática que pertenece a
+      la familia de algoritmos de búsqueda local. Se trata de un algoritmo
+      iterativo que parte de una solución arbitraria para un problema y luego
+      intenta encontrar una mejor mediante un cambio incremental. Si el cambio
+      produce una mejor solución, se realiza otro cambio incremental en la nueva
+      solución, y así sucesivamente hasta que no se encuentren más mejoras.
+    </p>
+  </section>
+
+  <h2>¿Como funciona Hill Climbing?</h2>
+  <section class="algorithm-section">
+    <ol>
+      <li>Comienza con una solución aleatoria.</li>
+      <li>Evalúa la solución actual.</li>
+      <li>Encuentra soluciones vecinas.</li>
+      <li>Evalúa cada solución vecina.</li>
+      <li>
+        Si una solución vecina es mejor que la actual, muévete a esa solución
+        vecina.
+      </li>
+      <li>
+        Repite los pasos 2 a 5 hasta que no encuentres soluciones vecinas
+        mejores.
+      </li>
+    </ol>
+    <p>
+      El método de ascenso de pendientes es fácil de implementar y funciona bien
+      en muchos problemas, pero puede estancarse en óptimos locales en lugar de
+      encontrar el óptimo global.
+    </p>
+  </section>
+
+  <section class="infographic-section">
+    <h2>Enunciado 1.1.1: Organigrama del Hill Climbing</h2>
+    <div class="infographic-placeholder">
+      <img
+        src="/assets/organigramaHC.png"
+        alt="Organigrama del Hill Climbing"
+      />
+    </div>
+  </section>
+
+  <section class="code-section">
+    <h2>Enunciado 1.1.2: Ejemplo basico en Python con NumPy y Pandas</h2>
+    <p>
+      Aquí hay una implementación básica de Hill Climbing usando Python, NumPy y
+      Pandas:
+    </p>
+    <div class="code-container">
+      <pre><code [innerText]="enunciado0102">
+      </code></pre>
+    </div>
+  </section>
+
+  <section class="infographic-section">
+    <h2>Enunciado 1.2.1: Infografia relacionada a Algoritmos Geneticos</h2>
+    <div class="infographic-placeholder">
+      <!-- Placeholder for infographic -->
+      <img src="/assets/algGenetico.png" alt="Infografía de Hill Climbing" />
+    </div>
+  </section>
+
+  <section class="code-section">
+    <h2>Enunciado 1.2.2: Ejemplo basico en Python de un Algoritmo Genetico</h2>
+    <p>
+      Aquí hay una implementación básica de la optimización de la función
+      objetivo usando Python y DEAP:
+    </p>
+    <div class="code-container">
+      <pre><code [innerText]="enunciado0104">
+      </code></pre>
+    </div>
+  </section>
+
+  <section class="code-section">
+    <!--Code snippet del enunciado 02-->
+    <h2>Enunciado 2: Optimizacion del Horario de Estudio</h2>
+    <p>
+      Un estudiante tiene disponibles 10 franjas horarias libres durante la
+      semana, cada una con una duracion y un nivel estimado de productividad
+      (del 1 al 10). El objetivo es seleccionar las mejores franjas para
+      maximizar su productividad seminal total, pero con una restriccion: no
+      debe estudiar mas de 15 horas en total. Implementa un algoritmo de Hill
+      Climbing que, partiendo de una seleccion aleatoria de franjas horarias,
+      busque mejorar la productividad total sin supercar el limite de horas. Usa
+      pandas para representar las franjas y Nupy para mutar la solucion.
+    </p>
+    <div class="code-container">
+      <pre><code [innerText]="enunciado02">
+
+      </code></pre>
+    </div>
+  </section>
+
+  <section class="code-section">
+    <!--Code snippet del enunciado 03-->
+    <h2>Enunciado 3: Seleccion optima de platos en el menu universitario</h2>
+    <p>
+      En la cafeteria universitaria hay 8 platos diferentes. Cada plato tiene un
+      precio, una cantidad de calorias y una puntuacion de satisfaccion segun
+      encuestas de estudiantes. Un estudiante solo tiene 20 soles para gastar
+      por dia y quiere obtener el maximo nivel de satisfaccion sin pasarse del
+      presupuesto ni consumer mas de 1000 calorias. Utiliza pandas para
+      representar el menu y numpy para generar combinaciones de platos. Aplica
+      hill climbing para encontrar la major combinacion de 3 platos que
+      maximicen la satisfaccion bajo las restricciones indicadas.
+    </p>
+    <div class="code-container">
+      <pre><code [innerText]="enunciado03">
+      </code></pre>
+    </div>
+  </section>
+
+  <section class="infographic-section">
+    <!--Code snippet del enunciado 04-->
+    <h2>Enunciado 4: Eleccion de cursos electivos segun afinidad y tiempo</h2>
+    <p>
+      Un estudiante debe elegir 4 de entre 10 cursos electives posibles. Cada
+      recurso tiene una carga horaria seminal, un nivel de interes personal del
+      1 al 10 y una calificacion historica promedio como estimador de facilidad.
+      El objetivo es encontrar una combinacion de cursos que maximice el interes
+      total del estudiante, siempre que la carga horaria combinada no exceda 12
+      horas semanales. Usa pandas para estructurar los datos de los cursos y
+      numpy para buscar combinaciones optimas usando un enfoque de hill climbing
+    </p>
+    <div class="code-container">
+      <pre><code [innerText]="enunciado03">
+      </code></pre>
+    </div>
+  </section>
+
+  <section class="applications-section">
+    <h2>Applicaciones del Hill Climbing</h2>
+    <ul>
+      <li>Machine Learning: Encontrar parámetros óptimos de modelos</li>
+      <li>Robotica: Planificación de rutas y control de movimiento</li>
+      <li>Programación de tareas: Problemas de asignación de recursos</li>
+      <li>Diseño de red: Optimización de topologías de redes</li>
+      <li>Juegos de IA: Decisión en juegos</li>
+    </ul>
+  </section>
+
+  <section class="limitations-section">
+    <h2>Limitaciones y variaciones</h2>
+    <p>Aunque el hill Climbing es sencillo, tiene algunas limitaciones:</p>
+    <ul>
+      <li>
+        <strong>Óptimos Locales:</strong> Puede quedarse atrapado en óptimos
+        locales
+      </li>
+      <li>
+        <strong>Mesetas:</strong> Tiene dificultades con áreas planas donde los
+        vecinos tienen valores iguales
+      </li>
+      <li><strong>Crestas:</strong> Puede oscilar en paisajes tipo cresta</li>
+    </ul>
+    <p>Las variaciones para abordar estas limitaciones incluyen:</p>
+    <ul>
+      <li>
+        <strong>Ascenso de Colina Estocástico:</strong> Selecciona
+        aleatoriamente entre los movimientos ascendentes
+      </li>
+      <li>
+        <strong>Ascenso de Colina de Primera Opción:</strong> Selecciona el
+        primer vecino mejor
+      </li>
+      <li>
+        <strong>Ascenso de Colina con Reinicio Aleatorio:</strong> Realiza
+        múltiples ejecuciones de ascenso de colina desde puntos de inicio
+        aleatorios
+      </li>
+      <li>
+        <strong>Recocido Simulado:</strong> Permite movimientos ocasionales
+        descendentes para escapar de los óptimos locales
+      </li>
+    </ul>
+  </section>
+</div>
